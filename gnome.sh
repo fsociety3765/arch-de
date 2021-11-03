@@ -21,6 +21,8 @@ PKGS=(
   'arc-icon-theme'
   'papirus-icon-theme'
   'vlc'
+  'mpv'
+  'celluloid'
   'gthumb'
   'gparted'
   'archlinux-wallpaper'
