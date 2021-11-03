@@ -27,6 +27,7 @@ PKGS=(
   'gparted'
   'archlinux-wallpaper'
   'grub-customizer'
+  'dconf-editor'
   'dina-font'
   'tamsyn-font'
   'bdf-unifont'
