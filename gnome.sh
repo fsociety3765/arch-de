@@ -53,11 +53,13 @@ PKGS=(
   'adobe-source-han-serif-otc-fonts'
   'noto-fonts-cjk'
   'noto-fonts-emoji'
+  'chrome-gnome-shell'
+  'pamac-all'
 )
 
 for PKG in "${PKGS[@]}"; do
   echo "Installing: ${PKG}"
-  sudo pacman -S "$PKG" --noconfirm --needed
+  paru -S "$PKG" --noconfirm --needed
 done
 
 sudo systemctl enable gdm
