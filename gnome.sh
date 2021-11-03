@@ -54,6 +54,7 @@ PKGS=(
   'noto-fonts-cjk'
   'noto-fonts-emoji'
   'chrome-gnome-shell'
+  'snapd'
   'pamac-all'
 )
 
