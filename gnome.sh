@@ -62,7 +62,7 @@ PKGS=(
   'snapd'
   'pamac-all'
   'onlyoffice-bin'
-  'gnome-shell-extention-pop-shell-git'
+  'gnome-shell-extension-pop-shell-git'
 )
 
 for PKG in "${PKGS[@]}"; do
