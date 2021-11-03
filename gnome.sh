@@ -70,5 +70,15 @@ for PKG in "${PKGS[@]}"; do
   paru -S "$PKG" --noconfirm --needed
 done
 
+PKGS=(
+  'epiphany' 
+  'gnome-software'
+)
+
+for PKG in "${PKGS[@]}"; do
+  echo "Uninstalling: ${PKG}"
+  paru -Rcns "$PKG" --noconfirm
+done
+
 sudo systemctl enable gdm
 
