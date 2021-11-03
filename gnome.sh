@@ -61,6 +61,8 @@ PKGS=(
   'chrome-gnome-shell'
   'snapd'
   'pamac-all'
+  'onlyoffice-bin'
+  'gnome-shell-extention-pop-shell-git'
 )
 
 for PKG in "${PKGS[@]}"; do
