@@ -15,6 +15,7 @@ PKGS=(
   'gdm' 
   'gnome'
   'firefox'
+  'gimp'
   'gnome-tweaks'
   'arc-gtk-theme'
   'arc-icon-theme'
