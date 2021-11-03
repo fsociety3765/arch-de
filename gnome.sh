@@ -57,7 +57,8 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
   echo "Installing: ${PKG}"
-  pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --noconfirm --needed
 done
 
 sudo systemctl enable gdm
+
