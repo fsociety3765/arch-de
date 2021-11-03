@@ -3,7 +3,8 @@
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-sudo reflector -c ${ISO} -a 12 --sort rate --save /etc/pacman.d/mirrorlist
+ISO=$(curl -4 ifconfig.co/country-iso)
+sudo reflector -c ${ISO} -a 48 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syy
 
 sudo firewall-cmd --add-port=1025-65535/tcp --permanent
