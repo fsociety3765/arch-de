@@ -135,7 +135,7 @@ sudo systemctl enable gdm
 echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
-gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 gnome-extensions enable pop-shell@system76.com
