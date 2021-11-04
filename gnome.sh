@@ -3,7 +3,6 @@
 echo "-------------------------------------------------"
 echo "Starting setup                                   "
 echo "-------------------------------------------------"
-su - root -c 'echo "${USER} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${USER}'
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 ISO=$(curl -4 ifconfig.co/country-iso)
@@ -134,9 +133,15 @@ echo "-------------------------------------------------"
 sudo systemctl enable gdm
 
 echo "-------------------------------------------------"
-echo "Resetting user (${USER}) sudo permissions        "
+echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
-su - root -c 'echo "${USER} ALL=(ALL) ALL" > /etc/sudoers.d/${USER}'
+gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gnome-extensions enable pop-shell@system76.com
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
