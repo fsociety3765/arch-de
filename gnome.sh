@@ -107,6 +107,7 @@ PKGS=(
   'alacarte'
   'deja-dup'
   'yad'
+  'loginized'
 )
 
 for PKG in "${PKGS[@]}"; do
