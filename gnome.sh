@@ -3,7 +3,7 @@
 echo "-------------------------------------------------"
 echo "Starting setup                                   "
 echo "-------------------------------------------------"
-sudo echo "${USER} ALL=(ALL) NOPASSWD: ALL" >> "/etc/sudoers.d/${USER}"
+sudo echo "${USER} ALL=(ALL) NOPASSWD: ALL" > "/etc/sudoers.d/${USER}"
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 ISO=$(curl -4 ifconfig.co/country-iso)
@@ -137,7 +137,7 @@ sudo systemctl enable gdm
 echo "-------------------------------------------------"
 echo "Resetting user (${USER}) sudo permissions        "
 echo "-------------------------------------------------"
-sudo echo "${USER} ALL=(ALL) ALL" >> "/etc/sudoers.d/${USER}"
+sudo echo "${USER} ALL=(ALL) ALL" > "/etc/sudoers.d/${USER}"
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
