@@ -143,6 +143,7 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+gsettings set org.gnome.desktop.background picture-uri file://usr/share/backgrounds/archlinux/simple.png
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
