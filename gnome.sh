@@ -90,6 +90,11 @@ PKGS=(
   'authy'
   'transmission-gtk'
   'transmission-remote-gtk'
+  'caffeine-ng'
+  'gtkhash'
+  'alacarte'
+  'deja-dup'
+  'yad'
 )
 
 for PKG in "${PKGS[@]}"; do
