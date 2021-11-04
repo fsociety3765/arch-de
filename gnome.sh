@@ -1,16 +1,28 @@
 #!/bin/bash
 
+echo "-------------------------------------------------"
+echo "Starting setup                                   "
+echo "-------------------------------------------------"
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
-
 ISO=$(curl -4 ifconfig.co/country-iso)
+
+echo "-------------------------------------------------"
+echo "Setting up the best mirrors for ${ISO}           "
+echo "-------------------------------------------------"
 sudo reflector -a 48 -c ${ISO} -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syy
 
+echo "-------------------------------------------------"
+echo "Configuring firewall with sensible defaults      "
+echo "-------------------------------------------------"
 sudo firewall-cmd --add-port=1025-65535/tcp --permanent
 sudo firewall-cmd --add-port=1025-65535/udp --permanent
 sudo firewall-cmd --reload
 
+echo "-------------------------------------------------"
+echo "Installing desktop environment packages          "
+echo "-------------------------------------------------"
 PKGS=(
   'gdm' 
   'gnome'
@@ -102,6 +114,9 @@ for PKG in "${PKGS[@]}"; do
   paru -S "$PKG" --noconfirm --needed
 done
 
+echo "-------------------------------------------------"
+echo "Uinstalling boat                                 "
+echo "-------------------------------------------------"
 PKGS=(
   'epiphany' 
   'gnome-software'
@@ -112,5 +127,8 @@ for PKG in "${PKGS[@]}"; do
   paru -Rcns "$PKG" --noconfirm
 done
 
+echo "-------------------------------------------------"
+echo "Enabing display manager service to run at boot   "
+echo "-------------------------------------------------"
 sudo systemctl enable gdm
 
