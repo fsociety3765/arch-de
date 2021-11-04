@@ -31,6 +31,7 @@ PKGS=(
   'flatpak'
   'pipewire'
   'pipepwire-pulse'
+  'pipewire-jack'
   'bluez'
   'bluez-utils'
   'cups'
