@@ -150,6 +150,7 @@ sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableFlatpak/EnableFlatpak/g" /etc/pamac.conf
 sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
+sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
