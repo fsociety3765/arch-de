@@ -3,6 +3,7 @@
 echo "-------------------------------------------------"
 echo "Starting setup                                   "
 echo "-------------------------------------------------"
+sudo echo 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 ISO=$(curl -4 ifconfig.co/country-iso)
