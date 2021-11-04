@@ -140,6 +140,14 @@ echo "-------------------------------------------------"
 sudo echo "${USER} ALL=(ALL) ALL" >> "/etc/sudoers.d/${USER}"
 
 echo "-------------------------------------------------"
-echo "Setup complete                                   "
-echo "                                   "
+echo "Complete                                         "
+echo "Rebooting in 5 seconds...                        "
+echo "Press CTRL+C to cancel the reboot                "
 echo "-------------------------------------------------"
+echo "Rebooting in 5 Seconds ..." && sleep 1
+echo "Rebooting in 4 Seconds ..." && sleep 1
+echo "Rebooting in 3 Seconds ..." && sleep 1
+echo "Rebooting in 2 Seconds ..." && sleep 1
+echo "Rebooting in 1 Second ..." && sleep 1
+reboot now
+
