@@ -3,7 +3,7 @@
 echo "-------------------------------------------------"
 echo "Starting setup                                   "
 echo "-------------------------------------------------"
-sudo echo 
+sudo echo "${USER} ALL=(ALL) NOPASSWD: ALL" >> "/etc/sudoers.d/${USER}"
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 ISO=$(curl -4 ifconfig.co/country-iso)
@@ -130,7 +130,16 @@ for PKG in "${PKGS[@]}"; do
 done
 
 echo "-------------------------------------------------"
-echo "Enabing display manager service to run at boot   "
+echo "Enabling display manager service to run at boot  "
 echo "-------------------------------------------------"
 sudo systemctl enable gdm
 
+echo "-------------------------------------------------"
+echo "Resetting user (${USER}) sudo permissions        "
+echo "-------------------------------------------------"
+sudo echo "${USER} ALL=(ALL) ALL" >> "/etc/sudoers.d/${USER}"
+
+echo "-------------------------------------------------"
+echo "Setup complete                                   "
+echo "                                   "
+echo "-------------------------------------------------"
