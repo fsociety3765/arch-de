@@ -96,7 +96,6 @@ PKGS=(
   'snapper-gui-git'
   'joplin-desktop'
   'standardnotes-bin'
-  'breeze'
   'breeze-icons'
   'xcursor-breeze'
   'vscodium-bin'
