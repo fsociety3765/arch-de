@@ -125,7 +125,7 @@ for PKG in "${PKGS[@]}"; do
 done
 
 echo "-------------------------------------------------"
-echo "Uinstalling boat                                 "
+echo "Uinstalling bloat                                "
 echo "-------------------------------------------------"
 PKGS=(
   'epiphany' 
