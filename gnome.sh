@@ -107,6 +107,7 @@ PKGS=(
   'deja-dup'
   'yad'
   'loginized'
+  'gnome-shell-extension-installer'
   'plymouth'
   'gdm-plymouth'
 )
