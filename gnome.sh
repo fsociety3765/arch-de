@@ -138,9 +138,10 @@ for PKG in "${PKGS[@]}"; do
 done
 
 echo "-------------------------------------------------"
-echo "Enabling display manager service to run at boot  "
+echo "Enabling services to run at boot  "
 echo "-------------------------------------------------"
 sudo systemctl enable gdm
+sudo systemctl enable snapd
 
 echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
