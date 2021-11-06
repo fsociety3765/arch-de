@@ -126,6 +126,10 @@ PKGS=(
   'gnome-shell-extension-desktop-icons-ng'
   'gnome-shell-extension-gnome-ui-tune-git'
   'gnome-shell-extension-just-perfection-desktop-git'
+  'dropbox'
+  'nautilus-dropbox'
+  'figma-linux'
+  'nextcloud-client'
 )
 
 for PKG in "${PKGS[@]}"; do
