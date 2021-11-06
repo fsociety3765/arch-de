@@ -114,12 +114,16 @@ PKGS=(
   'deja-dup'
   'yad'
   'loginized'
-  'gnome-shell-extension-installer'
   'plymouth'
   'gdm-plymouth'
   'lollypop'
   'python-notify2'
   'python-psutils'
+  'gnome-shell-extension-dash-to-dock'
+  'gnome-shell-extension-dash-to-panel'
+  'gnome-shell-extension-arc-menu-bin'
+  'gnome-shell-extension-desktop-icons-ng'
+  'gnome-shell-extension-gnome-ui-tune-git'
 )
 
 for PKG in "${PKGS[@]}"; do
