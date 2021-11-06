@@ -109,7 +109,7 @@ PKGS=(
   'transmission-gtk'
   'transmission-remote-gtk'
   'caffeine-ng'
-  'gtkhash'
+  'gtkhash-git'
   'alacarte'
   'deja-dup'
   'yad'
