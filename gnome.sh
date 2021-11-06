@@ -118,6 +118,8 @@ PKGS=(
   'plymouth'
   'gdm-plymouth'
   'lollypop'
+  'python-notify2'
+  'python-psutils'
 )
 
 for PKG in "${PKGS[@]}"; do
