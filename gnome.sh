@@ -33,6 +33,7 @@ PKGS=(
   'bitwarden'
   'signal-desktop'
   'element-desktop'
+  'discord'
   'gimp'
   'gnome-tweaks'
   'arc-gtk-theme'
