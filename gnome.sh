@@ -162,6 +162,13 @@ sudo sed -i "s/#EnableFlatpak/EnableFlatpak/g" /etc/pamac.conf
 sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ categories "['Office', 'Publishing']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ categories "['System']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ categories "['Utility']"
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
