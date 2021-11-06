@@ -166,7 +166,7 @@ sudo sed -i "s/#EnableFlatpak/EnableFlatpak/g" /etc/pamac.conf
 sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
-sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo './assets/background.jpg'
+sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo './background.jpg'
 gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
