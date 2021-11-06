@@ -117,6 +117,7 @@ PKGS=(
   'gnome-shell-extension-installer'
   'plymouth'
   'gdm-plymouth'
+  'lollypop'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -130,6 +131,7 @@ echo "-------------------------------------------------"
 PKGS=(
   'epiphany' 
   'gnome-software'
+  'gnome-music'
 )
 
 for PKG in "${PKGS[@]}"; do
