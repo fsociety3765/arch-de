@@ -124,6 +124,7 @@ PKGS=(
   'gnome-shell-extension-arc-menu-bin'
   'gnome-shell-extension-desktop-icons-ng'
   'gnome-shell-extension-gnome-ui-tune-git'
+  'gnome-shell-extension-just-perfection-desktop-git'
 )
 
 for PKG in "${PKGS[@]}"; do
