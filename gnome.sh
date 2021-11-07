@@ -195,6 +195,16 @@ echo "-------------------------------------------------"
 sudo groupadd -r audit
 sudo gpasswd -a ${USER} audit
 sudo echo "log_group = audit" >> /etc/audit/auditd.conf
+cat > ~/.config/autostart/apparmor-notify.desktop << EOF
+[Desktop Entry]
+Type=Application
+Name=AppArmor Notify
+Comment=Receive on screen notifications of AppArmor denials
+TryExec=aa-notify
+Exec=aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log
+StartupNotify=false
+NoDisplay=true
+EOF
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
