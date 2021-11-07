@@ -115,7 +115,6 @@ PKGS=(
   'alacarte'
   'deja-dup'
   'yad'
-  'loginized'
   'plymouth'
   'lollypop'
   'python-notify2'
@@ -147,7 +146,7 @@ done
 echo "-------------------------------------------------"
 echo "Enabling services to run at boot  "
 echo "-------------------------------------------------"
-sudo systemctl enable gdm
+sudo systemctl enable ssdm
 sudo systemctl enable snapd
 
 echo "-------------------------------------------------"
