@@ -93,11 +93,9 @@ PKGS=(
   'adobe-source-han-serif-otc-fonts'
   'noto-fonts-cjk'
   'noto-fonts-emoji'
-  'chrome-gnome-shell'
   'snapd'
   'pamac-all'
   'onlyoffice-bin'
-  'gnome-shell-extension-pop-shell-git'
   'etcher-bin'
   'gnome-connections'
   'gufw'
@@ -152,34 +150,26 @@ sudo systemctl enable snapd
 echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
-gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
-gnome-extensions enable pop-shell@system76.com
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable dash-to-dock@micxgx.gmail.com
-gnome-extensions enable ding@rastersoft.com
-gnome-extensions enable gnome-ui-tune@itstime.tech
-gnome-extensions enable just-perfection-desktop@just-perfection
-gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
-gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
+#gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+#gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+g#settings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+#gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+#gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
+#gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
 sudo sed -i "s/#EnableAUR/EnableAUR/g" /etc/pamac.conf
 sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableFlatpak/EnableFlatpak/g" /etc/pamac.conf
 sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
-sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
-sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo './background.jpg'
-gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ categories "['Office', 'Publishing']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ categories "['System']"
-gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ categories "['Utility']"
+#sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+#sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo './background.jpg'
+#gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System']"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ categories "['Office', 'Publishing']"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ categories "['System']"
+#gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ categories "['Utility']"
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
