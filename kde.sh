@@ -152,7 +152,7 @@ echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 #gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
-g#settings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+#gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 #gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 #gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 #gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
