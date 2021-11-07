@@ -102,7 +102,7 @@ PKGS=(
   'gnome-connections'
   'gufw'
   'snapper-gui-git'
-  'joplin-desktop'
+  'joplin-desktop-bin'
   'standardnotes-bin'
   'breeze-icons'
   'xcursor-breeze'
