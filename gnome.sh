@@ -137,6 +137,18 @@ for PKG in "${PKGS[@]}"; do
   paru -S "$PKG" --noconfirm --needed
 done
 
+if lspci | grep -E "NVIDIA|GeForce"; then
+    pacman -S nvidia --noconfirm --needed
+	  nvidia-xconfig
+elif lspci | grep -E "Radeon"; then
+    pacman -S xf86-video-amdgpu --noconfirm --needed
+elif lspci | grep -E "Integrated Graphics Controller"; then
+    pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
+elif lspci | grep -E "VMware"; then
+    IS_VM=true
+    pacman -S xf86-video-vmware xf86-input-vmmouse mesa --needed --noconfirm
+fi
+
 echo "-------------------------------------------------"
 echo "Uinstalling bloat                                "
 echo "-------------------------------------------------"
@@ -156,6 +168,9 @@ echo "Enabling services to run at boot  "
 echo "-------------------------------------------------"
 sudo systemctl enable gdm
 sudo systemctl enable snapd
+if [ IS_VM ]; then
+  sudo systemctl enable vmtoolsd
+fi
 
 echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
