@@ -130,6 +130,9 @@ PKGS=(
   'nautilus-dropbox'
   'figma-linux'
   'nextcloud-client'
+  'zenmap'
+  'gnome-usage'
+  'gnome-nettool'
 )
 
 for PKG in "${PKGS[@]}"; do
