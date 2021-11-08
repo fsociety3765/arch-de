@@ -190,6 +190,7 @@ gnome-extensions enable dash-to-dock@micxgx.gmail.com
 gnome-extensions enable ding@rastersoft.com
 gnome-extensions enable gnome-ui-tune@itstime.tech
 gnome-extensions enable just-perfection-desktop@just-perfection
+gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
