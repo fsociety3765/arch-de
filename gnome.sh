@@ -121,7 +121,7 @@ PKGS=(
   'python-psutils'
   'gnome-shell-extension-dash-to-dock'
   'gnome-shell-extension-dash-to-panel'
-  'gnome-shell-extension-arc-menu-bin'
+  'gnome-shell-extension-arc-menu'
   'gnome-shell-extension-desktop-icons-ng'
   'gnome-shell-extension-gnome-ui-tune-git'
   'gnome-shell-extension-just-perfection-desktop-git'
@@ -141,15 +141,15 @@ for PKG in "${PKGS[@]}"; do
 done
 
 if lspci | grep -E "NVIDIA|GeForce"; then
-    pacman -S nvidia --noconfirm --needed
-	  nvidia-xconfig
+    paru -S nvidia nvidia-settings nvidia-utils --noconfirm --needed
+    nvidia-xconfig
 elif lspci | grep -E "Radeon"; then
-    pacman -S xf86-video-amdgpu --noconfirm --needed
+    paru -S xf86-video-amdgpu --noconfirm --needed
 elif lspci | grep -E "Integrated Graphics Controller"; then
-    pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
-elif lspci | grep -E "VMware"; then
+    paru -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
+elif lspci | grep -E "VMware SVGA II Adapter"; then
     IS_VM=true
-    pacman -S xf86-video-vmware xf86-input-vmmouse mesa --needed --noconfirm
+    paru -S xf86-video-vmware xf86-input-vmmouse mesa --needed --noconfirm
 fi
 
 echo "-------------------------------------------------"
