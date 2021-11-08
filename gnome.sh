@@ -125,6 +125,7 @@ PKGS=(
   'gnome-shell-extension-desktop-icons-ng'
   'gnome-shell-extension-gnome-ui-tune-git'
   'gnome-shell-extension-just-perfection-desktop-git'
+  'gnome-shell-extension-appindicator'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
@@ -195,20 +196,28 @@ sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
 sudo ./set-gdm-wallpaper.sh './background.jpg'
-gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System']"
+gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Communication/ name "Communication"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ categories "['Office', 'Publishing']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ categories "['System']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ categories "['Utility']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Communication/ categories "['Instant Messaging', 'Chat']"
 
 echo "-------------------------------------------------"
 echo "Configuring AppArmor and Audit                   "
 echo "-------------------------------------------------"
 sudo groupadd -r audit
 sudo gpasswd -a ${USER} audit
-sudo echo "log_group = audit" >> /etc/audit/auditd.conf
+
+echo "-------------------------------------------------"
+echo "Configuring audit log group                      "
+echo "This must be run as the ROOT user                "
+echo "Please enter the ROOT user password when prompted"
+echo "-------------------------------------------------"
+su - root -c 'echo "log_group = audit" >> /etc/audit/auditd.conf'
 cat > ~/.config/autostart/apparmor-notify.desktop << EOF
 [Desktop Entry]
 Type=Application
