@@ -223,6 +223,7 @@ echo "This must be run as the ROOT user                "
 echo "Please enter the ROOT user password when prompted"
 echo "-------------------------------------------------"
 su - root -c 'echo "log_group = audit" >> /etc/audit/auditd.conf'
+mkdir ~/.config/autostart
 cat > ~/.config/autostart/apparmor-notify.desktop << EOF
 [Desktop Entry]
 Type=Application
