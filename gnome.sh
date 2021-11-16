@@ -44,6 +44,8 @@ PKGS=(
   'plymouth-theme-dark-arch'
   'terminator'
   'veracrypt'
+  'kdenlive'
+  'obs-studio'
   'vlc'
   'mpv'
   'celluloid'
