@@ -26,6 +26,7 @@ echo "-------------------------------------------------"
 PKGS=(
   'xorg'
   'gnome'
+  'qgnomeplatform'
   'firefox'
   'brave-bin'
   'torbrowser-launcher'
