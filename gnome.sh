@@ -35,6 +35,7 @@ PKGS=(
   'element-desktop'
   'discord'
   'gimp'
+  'inkscape'
   'gnome-tweaks'
   'arc-gtk-theme'
   'arc-icon-theme'
