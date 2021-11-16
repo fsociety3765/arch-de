@@ -42,6 +42,7 @@ PKGS=(
   'papirus-icon-theme'
   'papirus-folders'
   'plymouth-theme-dark-arch'
+  'rpi-imager-bin'
   'terminator'
   'veracrypt'
   'kdenlive'
