@@ -225,6 +225,9 @@ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgro
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
 sudo sed -i "s/#EnableAUR/EnableAUR/g" /etc/pamac.conf
 sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
+sudo sed -i "s/#NoUpdateHideIcon/NoUpdateHideIcon/g" /etc/pamac.conf
+sudo sed -i "s/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/g" /etc/pamac.conf
+sudo sed -i "s/#KeepBuiltPkgs/KeepBuiltPkgs/g" /etc/pamac.conf
 sudo echo "EnableFlatpak" >> /etc/pamac.conf
 sudo echo "CheckFlatpakUpdates" >> /etc/pamac.conf
 sudo echo "EnableSnap" >> /etc/pamac.conf
