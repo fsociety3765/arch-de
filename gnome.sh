@@ -143,6 +143,7 @@ PKGS=(
   'gnome-shell-extension-blur-my-shell-git'
   'gnome-shell-extension-sound-output-device-chooser'
   'gnome-shell-extension-vitals-git'
+  'gnome-shell-extension-gsconnect'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
