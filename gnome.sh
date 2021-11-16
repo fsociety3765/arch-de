@@ -150,6 +150,7 @@ PKGS=(
   'gnome-shell-extension-compiz-alike-magic-lamp-effect-git'
   'gnome-shell-extension-clipboard-indicator'
   'gnome-shell-extension-status-area-horizontal-spacing'
+  'gnome-shell-extension-transparent-window-moving-git'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
@@ -200,6 +201,7 @@ echo "Enabling services to run at boot  "
 echo "-------------------------------------------------"
 sudo systemctl enable gdm
 sudo systemctl enable snapd
+sudo systemctl enable cockpit
 if [ IS_VM ]; then
   sudo systemctl enable vmtoolsd
 fi
@@ -226,6 +228,7 @@ gnome-extensions enable sound-output-device-chooser@kgshank.net
 gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable compiz-alike-magic-lamp-effect@hermes83.github.com
 gnome-extensions enable pamac-updates@manjaro.org
+gnome-extensions enable transparent-window-moving@noobsai.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
