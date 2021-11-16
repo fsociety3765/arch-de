@@ -149,6 +149,7 @@ PKGS=(
   'gnome-shell-extension-gsconnect'
   'gnome-shell-extension-compiz-alike-magic-lamp-effect-git'
   'gnome-shell-extension-clipboard-indicator'
+  'gnome-shell-extension-status-area-horizontal-spacing'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
