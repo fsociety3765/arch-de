@@ -209,6 +209,7 @@ echo "-------------------------------------------------"
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+papirus-folders -C breeze --theme Papirus-Dark
 gnome-extensions enable pop-shell@system76.com
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
