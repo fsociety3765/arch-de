@@ -272,6 +272,14 @@ NoDisplay=true
 EOF
 
 echo "-------------------------------------------------"
+echo "Setting up ZSH plugins                           "
+echo "-------------------------------------------------"
+sed -i "s/plugins=(git)/plugins=(git z)/g" ~/.zshrc
+echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+echo "neofetch" >> ~/.zshrc
+
+echo "-------------------------------------------------"
 echo "Complete                                         "
 echo "Rebooting in 5 seconds...                        "
 echo "Press CTRL+C to cancel the reboot                "
