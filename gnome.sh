@@ -213,9 +213,9 @@ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgro
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
 sudo sed -i "s/#EnableAUR/EnableAUR/g" /etc/pamac.conf
 sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
-sudo sed -i "s/#EnableFlatpak/EnableFlatpak/g" /etc/pamac.conf
-sudo sed -i "s/#CheckFlatpakUpdates/CheckFlatpakUpdates/g" /etc/pamac.conf
-sudo sed -i "s/#EnableSnap/EnableSnap/g" /etc/pamac.conf
+sudo echo "EnableFlatpak" >> /etc/pamac.conf
+sudo echo "CheckFlatpakUpdates" >> /etc/pamac.conf
+sudo echo "EnableSnap" >> /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
 sudo ./set-gdm-wallpaper.sh --css "background-size: contain; background-color: #191919;" ./background.jpg
 gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication']"
