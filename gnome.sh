@@ -145,6 +145,7 @@ PKGS=(
   'gnome-shell-extension-sound-output-device-chooser'
   'gnome-shell-extension-vitals-git'
   'gnome-shell-extension-gsconnect'
+  'gnome-shell-extension-compiz-alike-magic-lamp-effect-git'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
