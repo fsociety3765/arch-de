@@ -89,6 +89,7 @@ PKGS=(
   'ttf-inconsolata'
   'ttf-jetbrains-mono'
   'ttf-monofur'
+  'ttf-ms-fonts'
   'adobe-source-code-pro-fonts'
   'cantarell-fonts'
   'inter-font'
