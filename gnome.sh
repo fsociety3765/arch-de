@@ -146,6 +146,7 @@ PKGS=(
   'gnome-shell-extension-vitals-git'
   'gnome-shell-extension-gsconnect'
   'gnome-shell-extension-compiz-alike-magic-lamp-effect-git'
+  'gnome-shell-extension-clipboard-indicator'
   'dropbox'
   'nautilus-dropbox'
   'figma-linux'
