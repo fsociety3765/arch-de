@@ -41,7 +41,6 @@ PKGS=(
   'arc-icon-theme'
   'papirus-icon-theme'
   'papirus-folders'
-  'plymouth-theme-dark-arch'
   'rpi-imager-bin'
   'terminator'
   'veracrypt'
@@ -159,6 +158,7 @@ PKGS=(
   'gnome-nettool'
   'plymouth'
   'gdm-plymouth'
+  'plymouth-theme-dark-arch'
 )
 
 for PKG in "${PKGS[@]}"; do
