@@ -280,11 +280,14 @@ echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 echo "neofetch" >> ~/.zshrc
 
-sudo sed -i "s/MODULES=(/MODULES=(i915 /g" /etc/mkinitcpio.conf
-sudo sed -i "s/base udev autodetect modconf/base udev plymouth autodetect modconf/g" /etc/mkinitcpio.conf
-
-sudo sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT="|GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rd.udev.log_priority=3 vt.global_cursor_default=0 |g' /etc/default/grub
-sudo update-grub
+#echo "-------------------------------------------------"
+#echo "Setting up Plymouth                              "
+#echo "-------------------------------------------------"
+#sudo sed -i "s/MODULES=(/MODULES=(i915 /g" /etc/mkinitcpio.conf
+#sudo sed -i "s/base udev autodetect modconf/base udev plymouth autodetect modconf/g" /etc/mkinitcpio.conf
+#sudo plymouth-set-default-theme -R spinner
+#sudo sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT="|GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rd.udev.log_priority=3 vt.global_cursor_default=0 |g' /etc/default/grub
+#sudo update-grub
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
