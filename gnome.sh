@@ -181,7 +181,7 @@ elif lspci | grep -E "VMware SVGA II Adapter"; then
     paru -S xf86-video-vmware xf86-input-vmmouse mesa --needed --noconfirm
 fi
 
-flatpak install kooha
+flatpak install kooha -y
 
 echo "-------------------------------------------------"
 echo "Uinstalling bloat                                "
