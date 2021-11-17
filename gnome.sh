@@ -236,6 +236,7 @@ gnome-extensions enable compiz-alike-magic-lamp-effect@hermes83.github.com
 gnome-extensions enable pamac-updates@manjaro.org
 gnome-extensions enable transparent-window-moving@noobsai.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'DYNAMIC'
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
 sudo sed -i "s/#EnableAUR/EnableAUR/g" /etc/pamac.conf
