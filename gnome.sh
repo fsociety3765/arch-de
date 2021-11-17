@@ -216,7 +216,7 @@ echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 papirus-folders -C breeze --theme Papirus-Dark
 gnome-extensions enable pop-shell@system76.com
@@ -229,7 +229,7 @@ gnome-extensions enable gnome-ui-tune@itstime.tech
 gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable compiz-windows-effect@hermes83.github.com
-gnome-extensions enable blur-my-shell@aunetx
+#gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable sound-output-device-chooser@kgshank.net
 gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable compiz-alike-magic-lamp-effect@hermes83.github.com
@@ -246,9 +246,9 @@ sudo sed -i "s/#KeepBuiltPkgs/KeepBuiltPkgs/g" /etc/pamac.conf
 sudo echo "EnableFlatpak" >> /etc/pamac.conf
 sudo echo "CheckFlatpakUpdates" >> /etc/pamac.conf
 sudo echo "EnableSnap" >> /etc/pamac.conf
-sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_cursors'
 sudo ./set-gdm-wallpaper.sh --css "background-size: contain; background-color: #191919;" ./background.jpg
-gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication']"
+gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication', 'Internet', 'AudioVideo']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
@@ -290,14 +290,14 @@ echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlight
 echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 echo "neofetch" >> ~/.zshrc
 
-#echo "-------------------------------------------------"
-#echo "Setting up Plymouth                              "
-#echo "-------------------------------------------------"
-#sudo sed -i "s/MODULES=(/MODULES=(i915 /g" /etc/mkinitcpio.conf
-#sudo sed -i "s/base udev autodetect modconf/base udev plymouth autodetect modconf/g" /etc/mkinitcpio.conf
-#sudo plymouth-set-default-theme -R spinner
-#sudo sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT="|GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rd.udev.log_priority=3 vt.global_cursor_default=0 |g' /etc/default/grub
-#sudo update-grub
+echo "-------------------------------------------------"
+echo "Setting up Plymouth                              "
+echo "-------------------------------------------------"
+sudo sed -i "s/MODULES=(/MODULES=(i915 /g" /etc/mkinitcpio.conf
+sudo sed -i "s/base udev autodetect modconf/base udev plymouth autodetect modconf/g" /etc/mkinitcpio.conf
+sudo plymouth-set-default-theme -R dark-arch
+sudo sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT="|GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rd.udev.log_priority=3 vt.global_cursor_default=0 |g' /etc/default/grub
+sudo update-grub
 
 echo "-------------------------------------------------"
 echo "Complete                                         "
