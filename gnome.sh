@@ -216,7 +216,7 @@ echo "-------------------------------------------------"
 echo "Configuring the desktop environment              "
 echo "-------------------------------------------------"
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_cursors'
+gsettings set org.gnome.desktop.interface cursor-theme 'breeze_cursors'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 papirus-folders -C breeze --theme Papirus-Dark
 gnome-extensions enable pop-shell@system76.com
@@ -246,7 +246,7 @@ sudo sed -i "s/#KeepBuiltPkgs/KeepBuiltPkgs/g" /etc/pamac.conf
 sudo echo "EnableFlatpak" >> /etc/pamac.conf
 sudo echo "CheckFlatpakUpdates" >> /etc/pamac.conf
 sudo echo "EnableSnap" >> /etc/pamac.conf
-sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_cursors'
+sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'breeze_cursors'
 sudo ./set-gdm-wallpaper.sh --css "background-size: contain; background-color: #191919;" ./background.jpg
 gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication', 'Internet', 'AudioVideo']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
