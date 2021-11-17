@@ -163,6 +163,7 @@ PKGS=(
   'plymouth'
   'gdm-plymouth'
   'plymouth-theme-dark-arch'
+  'wireshark-qt'
 )
 
 for PKG in "${PKGS[@]}"; do
