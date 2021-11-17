@@ -190,6 +190,8 @@ PKGS=(
   'gnome-music'
   'eog'
   'gnome-boxes'
+  'gnome-photos'
+  'totem'
 )
 
 for PKG in "${PKGS[@]}"; do
