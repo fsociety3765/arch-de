@@ -238,6 +238,8 @@ gnome-extensions enable transparent-window-moving@noobsai.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'DYNAMIC'
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']"
 sudo sed -i "s/#EnableAUR/EnableAUR/g" /etc/pamac.conf
 sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
