@@ -110,6 +110,7 @@ PKGS=(
   'popsicle-bin'
   'ipscan'
   'crossover'
+  'playonlinux'
   'android-file-transfer'
   'cockpit'
   'cockpit-machines'
