@@ -182,7 +182,7 @@ PKGS=(
   'gnome-font-viewer'
   'gnome-system-log'
   'remmina'
-  'kvantum-manager'
+  'kvantum-qt5'
   'sublime-text-4'
 )
 
