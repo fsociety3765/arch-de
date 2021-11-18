@@ -168,6 +168,21 @@ PKGS=(
   'hardinfo'
   'filezilla'
   'papirus-filezilla-themes'
+  'qt5ct'
+  'qt6ct'
+  'stoken'
+  'font-manager'
+  'webapp-manager'
+  'insomnia-bin'
+  'seahorse'
+  'nginx'
+  'github-desktop-bin'
+  'gnome-todo'
+  'touche'
+  'gnome-font-viewer'
+  'gnome-system-log'
+  'remmina'
+  'kvantum-manager'
 )
 
 for PKG in "${PKGS[@]}"; do
