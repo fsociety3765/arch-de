@@ -119,10 +119,9 @@ PKGS=(
   'gnome-connections'
   'gufw'
   'snapper-gui-git'
+  'snapper-rollback'
   'joplin-desktop-bin'
   'standardnotes-bin'
-  #'breeze-icons'
-  #'xcursor-breeze'
   'breeze'
   'vscodium-bin'
   'authy'
@@ -195,7 +194,6 @@ PKGS=(
   'eog'
   'gnome-boxes'
   'gnome-photos'
-  'totem'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -230,7 +228,7 @@ gnome-extensions enable gnome-ui-tune@itstime.tech
 gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable compiz-windows-effect@hermes83.github.com
-#gnome-extensions enable blur-my-shell@aunetx
+gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable sound-output-device-chooser@kgshank.net
 gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable compiz-alike-magic-lamp-effect@hermes83.github.com
@@ -238,6 +236,7 @@ gnome-extensions enable pamac-updates@manjaro.org
 gnome-extensions enable transparent-window-moving@noobsai.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'DYNAMIC'
+#gsettings set org.gnome.shell.extensions.blur-my-shell blur-dock false
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface show-battery-percentage true
@@ -247,9 +246,6 @@ sudo sed -i "s/#CheckAURUpdates/CheckAURUpdates/g" /etc/pamac.conf
 sudo sed -i "s/#NoUpdateHideIcon/NoUpdateHideIcon/g" /etc/pamac.conf
 sudo sed -i "s/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/g" /etc/pamac.conf
 sudo sed -i "s/#KeepBuiltPkgs/KeepBuiltPkgs/g" /etc/pamac.conf
-sudo echo "EnableFlatpak" >> /etc/pamac.conf
-sudo echo "CheckFlatpakUpdates" >> /etc/pamac.conf
-sudo echo "EnableSnap" >> /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'breeze_cursors'
 sudo ./set-gdm-wallpaper.sh --css "background-size: contain; background-color: #191919;" ./background.jpg
 gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication', 'Internet', 'AudioVideo']"
@@ -257,10 +253,21 @@ gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folder
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ name "Accessories"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Communication/ name "Communication"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Internet/ name "Internet"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/AudioVideo/ name "Audio Video"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ categories "['Office', 'Publishing']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ categories "['System']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Accessories/ categories "['Utility']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Communication/ categories "['Instant Messaging', 'Chat']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Internet/ categories "['Internet']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/AudioVideo/ categories "['AudioVideo', 'Audio', 'Video']"
+
+echo "-------------------------------------------------"
+echo "Configuring Pamac for Flatpak & Snap             "
+echo "This must be run as the ROOT user                "
+echo "Please enter the ROOT user password when prompted"
+echo "-------------------------------------------------"
+su - root -c 'echo "EnableFlatpak" >> /etc/pamac.conf;echo "CheckFlatpakUpdates" >> /etc/pamac.conf;echo "EnableSnap" >> /etc/pamac.conf'
 
 echo "-------------------------------------------------"
 echo "Configuring AppArmor and Audit                   "
