@@ -215,6 +215,7 @@ PKGS=(
   'eog'
   'gnome-boxes'
   'gnome-photos'
+  'gnome-books'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -228,6 +229,7 @@ echo "-------------------------------------------------"
 sudo systemctl enable gdm
 sudo systemctl enable snapd
 sudo systemctl enable cockpit.socket
+sudo systemctl enable nginx
 if [ IS_VM ]; then
   sudo systemctl enable vmtoolsd
 fi
