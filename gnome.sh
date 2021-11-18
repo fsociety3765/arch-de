@@ -25,6 +25,8 @@ echo "Installing desktop environment packages          "
 echo "-------------------------------------------------"
 PKGS=(
   'xorg'
+  'plymouth'
+  'gdm-plymouth'
   'gnome'
   'qgnomeplatform'
   'firefox'
@@ -160,10 +162,12 @@ PKGS=(
   'zenmap'
   'gnome-usage'
   'gnome-nettool'
-  'plymouth'
-  'gdm-plymouth'
   'plymouth-theme-dark-arch'
   'wireshark-qt'
+  'gnome-firmware'
+  'hardinfo'
+  'filezilla'
+  'papirus-filezilla-themes'
 )
 
 for PKG in "${PKGS[@]}"; do
