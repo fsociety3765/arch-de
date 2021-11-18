@@ -183,6 +183,7 @@ PKGS=(
   'gnome-system-log'
   'remmina'
   'kvantum-manager'
+  'sublime-text-4'
 )
 
 for PKG in "${PKGS[@]}"; do
