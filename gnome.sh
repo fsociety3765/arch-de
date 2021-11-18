@@ -123,6 +123,7 @@ PKGS=(
   'joplin-desktop-bin'
   'standardnotes-bin'
   'breeze'
+  'breeze-gtk'
   'vscodium-bin'
   'authy'
   'transmission-gtk'
