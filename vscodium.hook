@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = vscodium*
+[Action]
+Description = Removing inode/directory association...
+Depends = coreutils
+When = PostTransaction
+Exec = /usr/bin/sh -c '/usr/bin/sed -i "s/inode\/directory;//" /usr/share/applications/codium.desktop && /usr/bin/update-desktop-database'
