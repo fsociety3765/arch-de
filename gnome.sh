@@ -272,6 +272,7 @@ sudo sed -i "s/#RemoveUnrequiredDeps/RemoveUnrequiredDeps/g" /etc/pamac.conf
 sudo sed -i "s/#KeepBuiltPkgs/KeepBuiltPkgs/g" /etc/pamac.conf
 sudo -u gdm dbus-launch gsettings set org.gnome.desktop.interface cursor-theme 'breeze_cursors'
 sudo ./set-gdm-wallpaper.sh --css "background-size: contain; background-color: #191919;" ./background.jpg
+gsettings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
 gsettings set org.gnome.desktop.app-folders folder-children "['Office', 'Accessories', 'System', 'Communication', 'Internet', 'AudioVideo']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name "System Tools"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/Office/ name "Office"
