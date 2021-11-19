@@ -223,6 +223,19 @@ for PKG in "${PKGS[@]}"; do
 done
 
 echo "-------------------------------------------------"
+echo "Setting up NGINX reverse proxy                   "
+echo "-------------------------------------------------"
+sudo mkdir /etc/nginx/config.d
+sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+sudo cp ./nginx.conf /etc/nginx/
+sudo cp ./cockpit.localhost.conf /etc/nginx/config.d/
+sudo cp ./duplicati.localhost.conf /etc/nginx/config.d/
+sudo cp ./cockpit.conf /etc/cockpit/
+sudo chown root:root /etc/nginx/nginx.conf
+sudo chown root:root /etc/nginx/config.d/*.conf
+sudo chown root:root /etc/cockpit/cockpit.conf
+
+echo "-------------------------------------------------"
 echo "Enabling services to run at boot  "
 echo "-------------------------------------------------"
 sudo systemctl enable gdm
