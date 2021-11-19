@@ -259,7 +259,8 @@ gnome-extensions enable pamac-updates@manjaro.org
 gnome-extensions enable transparent-window-moving@noobsai.github.com
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'DYNAMIC'
-#gsettings set org.gnome.shell.extensions.blur-my-shell blur-dock false
+gsettings set org.gnome.shell.extensions.blur-my-shell blur-dash false
+gsettings set org.gnome.shell.extensions.blur-my-shell appfolder-dialog-opacity '0.80'
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/archlinux/simple.png
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface show-battery-percentage true
