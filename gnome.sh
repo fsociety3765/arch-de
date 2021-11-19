@@ -115,7 +115,6 @@ PKGS=(
   'playonlinux'
   'android-file-transfer'
   'cockpit'
-  'cockpit-machines'
   'packagekit'
   'duplicati2-beta'
   'gnome-connections'
