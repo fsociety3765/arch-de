@@ -229,6 +229,7 @@ sudo systemctl enable gdm
 sudo systemctl enable snapd
 sudo systemctl enable cockpit.socket
 sudo systemctl enable nginx
+sudo systemctl enable duplicati
 if [ IS_VM ]; then
   sudo systemctl enable vmtoolsd
 fi
