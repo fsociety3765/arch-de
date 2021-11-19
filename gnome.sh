@@ -183,6 +183,7 @@ PKGS=(
   'remmina'
   'kvantum-qt5'
   'sublime-text-4'
+  'code-server'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -230,10 +231,12 @@ sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 sudo cp ./nginx.conf /etc/nginx/
 sudo cp ./cockpit.localhost.conf /etc/nginx/config.d/
 sudo cp ./duplicati.localhost.conf /etc/nginx/config.d/
+sudo cp ./code.localhost.conf /etc/nginx/config.d/
 sudo cp ./cockpit.conf /etc/cockpit/
 sudo chown root:root /etc/nginx/nginx.conf
 sudo chown root:root /etc/nginx/config.d/*.conf
 sudo chown root:root /etc/cockpit/cockpit.conf
+sudo sed -i '5s/$/ cockpit.localhost duplicati.locahost code.localhost/' /etc/hosts
 
 echo "-------------------------------------------------"
 echo "Enabling services to run at boot  "
@@ -243,6 +246,7 @@ sudo systemctl enable snapd
 sudo systemctl enable cockpit.socket
 sudo systemctl enable nginx
 sudo systemctl enable duplicati
+sudo systemctl enable code-server@${USER}
 if [ IS_VM ]; then
   sudo systemctl enable vmtoolsd
 fi
