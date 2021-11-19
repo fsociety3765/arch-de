@@ -234,7 +234,7 @@ sudo cp ./cockpit.conf /etc/cockpit/
 sudo chown root:root /etc/nginx/nginx.conf
 sudo chown root:root /etc/nginx/config.d/*.conf
 sudo chown root:root /etc/cockpit/cockpit.conf
-sudo sed -i '5s/$/ cockpit.localhost duplicati.locahost code.localhost/' /etc/hosts
+sudo sed -i '5s/$/ cockpit.localhost duplicati.localhost code.localhost/' /etc/hosts
 
 echo "-------------------------------------------------"
 echo "Enabling services to run at boot  "
