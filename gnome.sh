@@ -21,6 +21,13 @@ sudo firewall-cmd --add-port=1025-65535/udp --permanent
 sudo firewall-cmd --reload
 
 echo "-------------------------------------------------"
+echo "Adding custom Pacman hooks                       "
+echo "-------------------------------------------------"
+sudo mkdir /etc/pacman.d/hooks
+sudo cp ./vscodium.hook /etc/pacman.d/hooks/
+sudo chown root:root /etc/pacman.d/vscodium.hook
+
+echo "-------------------------------------------------"
 echo "Installing desktop environment packages          "
 echo "-------------------------------------------------"
 PKGS=(
