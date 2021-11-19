@@ -229,9 +229,7 @@ echo "-------------------------------------------------"
 sudo mkdir /etc/nginx/config.d
 sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 sudo cp ./nginx.conf /etc/nginx/
-sudo cp ./cockpit.localhost.conf /etc/nginx/config.d/
-sudo cp ./duplicati.localhost.conf /etc/nginx/config.d/
-sudo cp ./code.localhost.conf /etc/nginx/config.d/
+sudo cp ./*.localhost.conf /etc/nginx/config.d/
 sudo cp ./cockpit.conf /etc/cockpit/
 sudo chown root:root /etc/nginx/nginx.conf
 sudo chown root:root /etc/nginx/config.d/*.conf
